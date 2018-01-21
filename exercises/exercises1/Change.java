@@ -8,8 +8,19 @@ public class Change {
 		//
 		// Below, prompt the user to enter a number of pennies
 		//
-		
-		
+		ArgsProcessor ap=new ArgsProcessor(args);
+		int numPennies=ap.nextInt("Starting number of Pennies?");
+		int numDollars= numPennies/100;
+		int numQuarters=numPennies%100/25;
+		int numDimes=numPennies%100%25/10;
+		int numNickles=numPennies%100%25%10/5;
+		int numpennies=numPennies%100%25%10%5;
+		System.out.println(numPennies);
+		System.out.println(numDollars);
+		System.out.println(numQuarters);
+		System.out.println(numDimes);
+		System.out.println(numNickles);
+		System.out.println(numpennies);
 		//
 		// Then, compute and print out how many 
 		//    dollars, quarters, dimes, nickels, and pennies
