@@ -13,6 +13,9 @@ public class BadSwap {
 		if (x > y) {
 			x = y;     // Bad
 			y = x;     // swap!!
+			           // If x>y, x=y gives the value of y to x, and now x=y=originate value of y
+			           // Then y=x gives the value of x now to y, now y=x=originate value of y
+			           // If x<=y, the condition is False and the changing process won't be executed.
 		}
 		
 		System.out.println("x and y are now"
