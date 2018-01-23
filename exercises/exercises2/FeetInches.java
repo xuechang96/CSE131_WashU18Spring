@@ -1,8 +1,13 @@
 package exercises2;
 
+import cse131.ArgsProcessor;
+
 public class FeetInches {
 
 	public static void main(String[] args) {
+		ArgsProcessor ap=new ArgsProcessor(args);
+		double inches=ap.nextDouble("the number of inches");
+		
 		//
 		// Prompt the user for a number of inches
 		//

@@ -1,8 +1,17 @@
 package exercises2;
 
+import cse131.ArgsProcessor;
+
 public class CoinFlip {
 
 	public static void main(String[] args) {
+		ArgsProcessor ap=new ArgsProcessor(args);
+		if (Math.random()>0.5){
+			System.out.println("Head");
+		}
+		else {
+			System.out.println("Tails");
+		}
 		//
 		// Use the random number generator
 		//    (Math.random())
