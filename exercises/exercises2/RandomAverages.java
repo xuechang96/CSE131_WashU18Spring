@@ -11,7 +11,14 @@ public class RandomAverages {
 		//     thus far.
 		//
 		// Your code goes below here.
-		
+		int t=1;
+		double sum=0.0;
+		while (t<1001) {
+			sum=sum+Math.random();
+			double b=sum/t;
+			System.out.println("Average of "+t+" numbers is "+b);
+			t=t+1;
+		}
 		
 		
 		//

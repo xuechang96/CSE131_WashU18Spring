@@ -6,7 +6,15 @@ public class FeetInches {
 
 	public static void main(String[] args) {
 		ArgsProcessor ap=new ArgsProcessor(args);
-		double inches=ap.nextDouble("the number of inches");
+		int inches=ap.nextInt("the number of inches");
+		int Feet=inches/12;
+		int Inches=inches%12;
+		if (Feet%2==0) {
+			System.out.println(Feet+" feet "+Inches+" inches");
+		}
+		else {
+			System.out.println(Feet+" foot "+Inches+" inches");
+		}
 		
 		//
 		// Prompt the user for a number of inches

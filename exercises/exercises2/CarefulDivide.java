@@ -8,6 +8,13 @@ public class CarefulDivide {
 		ArgsProcessor ap = new ArgsProcessor(args);
 		int numerator   = ap.nextInt("Enter numerator");
 		int denominator = ap.nextInt("Enter denominator");
+		if (denominator==0) {
+			System.out.println("Error");
+		}
+		else {
+			int result=numerator/denominator;
+			System.out.println("The result is "+result);
+		}
 
 		// Compute numerator / denominator
 		//  as an int result

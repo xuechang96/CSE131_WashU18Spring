@@ -3,7 +3,24 @@ package exercises2;
 public class Die {
 
 	public static void main(String[] args) {
-
+		double t = Math.random();
+		if (t<=1.0/6.0){
+			System.out.println("1");
+		}
+		else if (t<=1.0/3.0){
+			System.out.println("2");
+		}
+		else if (t<=1.0/2.0){
+				System.out.println("3");
+		}
+		else if (t<=2.0/3.0){
+			System.out.println("4");
+	}
+		else if (t<=5.0/6.0){
+			System.out.println("5");
+	}
+		else {
+			System.out.println("6");
 		//
 		// Use the random number generator
 		//    (Math.random())
@@ -19,5 +36,6 @@ public class Die {
 		//
 
 	}
-
+		
+    }
 }
