@@ -1,0 +1,19 @@
+Greetings from your synthetically friendly robotic CSE131 grader!
+Report prepared at Fri Jan 26 09:46:49 CST 2018
+To count, your work must have been done by 2017-01-26T12:00:00+00:00
+
+Exercise report:
+
+Counts?	Exercise
+Yes	BadSwap.java
+Yes	CarefulDivide.java
+Yes	CoinFlip.java
+Yes	Die.java
+Yes	FeetInches.java
+Yes	Heads.java
+Yes	Loops.java
+No	Max.java
+Yes	RandomAverages.java
+
+-------------
+Score:   88%
