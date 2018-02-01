@@ -11,24 +11,19 @@ public class Eratosthenes {
 		for (int i=0;i<N;++i) {
 			contents[i]=i+2;
 		}
-		for (int n=2;n<N+2;++n) {
-			if(n>2&&n%2==0) {
-				contents[n-2]=0;
+		for(int a=2;a<N+3;++a) {
+			int f=(N+2)/a;
+			if(f>=2&&(a*f-2<N)) {
+			for (int n=2;n<=f;++n) {
+				contents[a*n-2]=0;
 			}
-			if(n>3&&n%3==0) {
-				contents[n-2]=0;
-			}
-			if(n>5&&n%5==0) {
-				contents[n-2]=0;
-			}
-			if(n>7&&n%7==0) {
-				contents[n-2]=0;
 			}
 		}
+			
 		System.out.print("Primes under "+(N+2)+" is: ");
-		for (int n=0;n<N;++n) {
-		if (contents[n]!=0) {
-			System.out.print(contents[n]+" ");
+		for (int s=0;s<N;++s) {
+		if (contents[s]!=0) {
+			System.out.print(contents[s]+" ");
 		}	
 	}
 		System.out.println("");
