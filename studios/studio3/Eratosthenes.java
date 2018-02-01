@@ -11,7 +11,7 @@ public class Eratosthenes {
 		for (int i=0;i<N;++i) {
 			contents[i]=i+2;
 		}
-		for (int n=0;n<N;++n) {
+		for (int n=2;n<N+2;++n) {
 			if(n>2&&n%2==0) {
 				contents[n-2]=0;
 			}

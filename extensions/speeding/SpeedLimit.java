@@ -24,11 +24,6 @@ public class SpeedLimit {
 				System.out.println("You went "+(v-l)+" MPH over the speed limit.");
 				System.out.println("Your fine is $"+f+".");
 			}
-		}
-		
-		
-		
+		}		
 	}
-	
-
 }
