@@ -5,6 +5,7 @@ import cse131.ArgsProcessor;
 public class Eratosthenes {
 
 	public static void main(String[] args) {
+		
 		ArgsProcessor ap=new ArgsProcessor(args);
 		int N=ap.nextInt("The size n");
 		int []contents=new int[N];
