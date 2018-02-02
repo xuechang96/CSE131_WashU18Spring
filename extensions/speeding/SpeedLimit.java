@@ -8,22 +8,10 @@ public class SpeedLimit {
 		ArgsProcessor ap=new ArgsProcessor(args);
 		int v=ap.nextInt("The speed of you (MPH)");
 		int l=ap.nextInt("The limit of the road (MPH)");
-		if (v<l) {
-			System.out.println("You reported a speed of "+v+" MPH for a speed limit of "+l+" MPH, no fine!");
-		}
-		else {
-			if (v-l<10){
-				System.out.println("You reported a speed of "+v+" MPH for a speed limit of "+l+" MPH. ");	
-				System.out.println("You went "+(v-l)+" MPH over the speed limit.");
-				System.out.println("Your fine is $50.");
-			}
-			else {
-				int a=v-l-10;
-				int f=10*a+50;
-				System.out.println("You reported a speed of "+v+" MPH for a speed limit of "+l+" MPH. ");	
-				System.out.println("You went "+(v-l)+" MPH over the speed limit.");
-				System.out.println("Your fine is $"+f+".");
-			}
-		}		
+		System.out.println("You reported a speed of "+v+" MPH for a speed limit of "+l+" MPH");
+		String r1=(v>l)?("You went "+(v-l)+" MPH over the speed limit."):("No fine.");
+		String r=(v-l>10)?( "Your fine is $"+(10*(v-l-10)+50)+"."):("Your fine is $50.");
+		System.out.println(r1);
+		System.out.println(r);		
 	}
 }
