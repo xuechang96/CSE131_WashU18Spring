@@ -20,6 +20,7 @@ public class DiceSimulation {
 			}
 			System.out.println();
 		}
+		
 		int s=0;
 		int s1=0;
 		for (int m=0;m<T;++m) {
@@ -56,8 +57,8 @@ public class DiceSimulation {
 	System.out.println("");
 	System.out.println("Sum    Number of times Sum was seen");
 	
-	int[] numbers = new int[T];  
-    for(int w =0;w< T;w++){  
+	int[] numbers = new int[20];  
+    for(int w =0;w< 20;w++){  
         numbers[w] = 0;  
     }  
       
