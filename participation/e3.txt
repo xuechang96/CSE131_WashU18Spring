@@ -1,0 +1,13 @@
+Greetings from your synthetically friendly robotic CSE131 grader!
+Report prepared at Sun Feb  4 07:08:55 CST 2018
+To count, your work must have been done by 2018-02-04T18:32:00+00:00
+
+Exercise report:
+
+Counts?	Exercise
+Yes	CopyArrayAndPigLatin.java
+Yes	Shuffle.java
+Yes	TimesTable.java
+
+-------------
+Score:   100%
