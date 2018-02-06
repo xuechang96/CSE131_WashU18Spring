@@ -53,6 +53,7 @@ public class DiceSimulation {
 			System.out.print(sum[a]+" ");
 	
 		}
+		
 	}
 	System.out.println("");
 	System.out.println("Sum    Number of times Sum was seen");
