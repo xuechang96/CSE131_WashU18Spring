@@ -17,7 +17,13 @@ public class Pitches {
 		System.out.println("The frequecy is "+f);
 		System.out.println("The diatonic fifth "+f7);
 		double r=f7/f;
-		System.out.println("the ration is "+r);
+		
+		int p2=ap.nextInt("Enter an integer representing another pitch.");
+		double f2=440.0*Math.pow(2, p2/12.0);
+		double  fr=f2/f;
+		System.out.println("The other pitch is "+p2);
+		System.out.println("The frequency of the other pitch is "+f2);
+		System.out.println("the raio of the two frequecy is "+fr);
 
 	}
 
