@@ -10,12 +10,12 @@ public class WaitPoint {
 		
 		// wait for the mouse to be pressed and released
 		while (!StdDraw.mousePressed()) {	
-			//do nothing
+			StdDraw.pause(100);
 		}
 		System.out.println("is Pressed");
 		// here, the mouse has been pressed
 		while(StdDraw.mousePressed()) {
-			//do nothing
+			StdDraw.pause(100);
 		}
 		// here the mouse is released
 		System.out.println("is Released");
