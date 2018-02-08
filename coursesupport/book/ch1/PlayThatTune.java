@@ -2,7 +2,7 @@ package book.ch1;
 import cse131.ArgsProcessor;
 import sedgewick.*;
 /*************************************************************************
- *  Compilation:  javac PlayThatTune.java
+ *  Compilation:  java PlayThatTune.java
  *  Execution:    java PlayThatTune < input.txt
  *  Dependencies: StdAudio.java StdAudio.java
  *
