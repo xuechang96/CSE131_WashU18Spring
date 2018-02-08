@@ -10,6 +10,7 @@ public class WaitPoint {
 		
 		// wait for the mouse to be pressed and released
 		while (!StdDraw.mousePressed()) {	
+			//do nothing
 		}
 		System.out.println("is Pressed");
 		// here, the mouse has been pressed
@@ -29,12 +30,12 @@ public class WaitPoint {
 			//do nothing
 		}
 		if (StdDraw.nextKeyTyped()=='q') {
-			StdDraw.text(x-0.5, y-0.5, "good bye!");
+			StdDraw.text(0.5, 0.5,"good bye!");
 		}
 		// here, a q has been typed
 		
 		
-		StdDraw.text(0.5, 0.5, "Farewell!");
+		
 
 	}
 
