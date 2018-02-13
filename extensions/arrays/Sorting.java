@@ -1,3 +1,4 @@
+
 package arrays;
 import cse131.ArgsProcessor;
 
@@ -19,7 +20,7 @@ public class Sorting {
 		for( sortCount=0;sortCount<N;sortCount++) {
 			double k=Integer.MAX_VALUE;
 		for (int i=sortCount;i<N;i++) {
-		if (n[i]<k) {
+		if (n[i]<=k) {
 			k=n[i];
 		}
 		}
