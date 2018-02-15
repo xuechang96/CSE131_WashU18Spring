@@ -22,16 +22,16 @@ public class Sorting {
 		for (int i=sortCount;i<N;i++) {
 		if (n[i]<=k) {
 			k=n[i];
+			n[i]=n[sortCount];
+			n[sortCount]=(int)k;
 		}
 		}
-		for (int i=0;i<N;i++) {
-			if (n[i]==k) {
-				n[i]=n[sortCount];
-				n[sortCount]=(int)k;
-		}
+		System.out.println(k);	
+		System.out.println(n[sortCount]);
 		}
 		
-	}
+		
+	
 		int s=0;
 		for (int i=0;i<N;i++) {
 			s=s+n[i];
