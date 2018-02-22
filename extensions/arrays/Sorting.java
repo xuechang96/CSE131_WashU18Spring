@@ -26,8 +26,7 @@ public class Sorting {
 			n[sortCount]=(int)k;
 		}
 		}
-		System.out.println(k);	
-		System.out.println(n[sortCount]);
+		
 		}
 		
 		

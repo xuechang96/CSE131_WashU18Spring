@@ -32,7 +32,7 @@ public class BouncingBall {
 
             // bounce off wall according to law of elastic collision
             if (Math.abs(rx + vx) > 1.0 - radius) vx = -vx;
-            //if (Math.abs(ry + vy) > 1.0 - radius) vy = -vy;
+            if (Math.abs(ry + vy) > 1.0 - radius) vy = -vy;
 
             // update position
             rx = rx + vx; 
