@@ -18,12 +18,15 @@ public class MethodsTest {
 		for (int i=0; i < 10; ++i) {
 			assertEquals(i+i, Methods.sum(i, i));
 		}
+		for (int i=-10; i < 00; ++i) {
+			assertEquals(i+i, Methods.sum(i, i));
+		}
 	}
 	
 	@Test
 	public void thisTestShouldFail() {
-		assertEquals(1, Methods.mpy(0,3));
-		assertEquals(1, Methods.mpy(2, 5));
+		assertEquals(0, Methods.mpy(0,3));
+		assertEquals(10, Methods.mpy(2, 5));
 	}
 	
 	@Test
@@ -47,4 +50,8 @@ public class MethodsTest {
 		assertEquals(0.5, Methods.average(new double[] { 0, 1 }), 0.1);
 	}
 
+	@Test
+	public void testPower() {
+		assertEquals(27, Methods.power(3,3));
+	}
 }
