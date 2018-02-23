@@ -1,0 +1,12 @@
+Greetings from your synthetically friendly robotic CSE131 grader!
+Report prepared at Fri Feb 23 14:23:13 CST 2018
+To count, your work must have been done by 2017-02-23T16:32:00+00:00
+
+Exercise report:
+
+Counts?	Exercise
+Yes	Recipe.java
+Yes	StringMethods.java
+
+-------------
+Score:   100%
