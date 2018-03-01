@@ -4,6 +4,7 @@ public class FactorialNoBaseCase {
 	
 	public static int factorial(int n) {
 		return n * factorial(n-1);
+		//when n=0, it returns 0 rather than 1
 	}
 
 	public static void main(String[] args) {

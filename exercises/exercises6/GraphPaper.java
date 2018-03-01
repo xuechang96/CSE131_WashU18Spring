@@ -14,6 +14,7 @@ public class GraphPaper {
 	 */
 	public static void gp(double llx, double lly, double size) {
 		// base case, stop when the size is sufficiently small
+		StdDraw.setPenColor(Color.RED);
 		if (size < .05) {
 			return;  // abandon recursion
 		}
@@ -21,7 +22,12 @@ public class GraphPaper {
 		//  the square (divide into 4 portions). Your code goes
 		//  below here:
 		//
-		
+		StdDraw.line(llx,lly+size/2,llx+size,lly+size/2);
+		StdDraw.line(llx+size/2,lly,llx+size/2,lly+size);
+		gp(llx,lly,size/2);
+		gp(llx,lly+size/2,size/2);
+		gp(llx+size/2,lly,size/2);
+		gp(llx+size/2,lly+size/2,size/2);
 		// 
 		// Now, after you have drown athose two lines,
 		// let's pause to accentuate the recursive drama
@@ -39,7 +45,11 @@ public class GraphPaper {
 	}
 
 	public static void main(String[] args) {
-		StdDraw.setPenColor(Color.RED);
+		
+		gp(0,0,1);
+		StdDraw.show(10);
+		
+		
 		// 
 		// Once you get things working, you an uncomment the two
 		//   calls below to StdDraw.show
