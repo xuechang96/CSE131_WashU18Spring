@@ -5,7 +5,12 @@ import java.awt.Color;
 import sedgewick.StdDraw;
 
 public class Triangles {
-
+	/**
+	 * 
+	 * @param llx
+	 * @param lly
+	 * @param size
+	 */
 	public static void tri(double llx, double lly, double size) {
 		StdDraw.setPenColor(Color.black);
 		if (size < .01) {

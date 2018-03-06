@@ -1,7 +1,11 @@
 package lab6;
 
 public class Beer {
-
+/**
+ * 
+ * @param n repeat times of the song 
+ * @return n repeat times of the song
+ */
 	public static String bottlesOfBeer(int n) {
 		String r="";
 		for (int i=n;i>0;i--) {
@@ -10,6 +14,13 @@ public class Beer {
 		return r;
 		}			
 	
+	/**
+	 * 
+	 * @param n
+	 * @return f(x) =    x-10     if x > 100
+        				= f(f(x+11))  if x <= 100
+
+	 */
 	public static int f(int n) {			
 		int r=0;
 		if(n>100) {
@@ -21,6 +32,14 @@ public class Beer {
 		return r;
 	}
 	
+	/**
+	 * 
+	 * @param x
+	 * @param y
+	 * @return  g(x,y)  = y+1               if x = 0
+          = g(x-1,1)          if x > 0 and y = 0
+          = g(x-1, g(x, y-1)) if x > 0 and y > 0
+	 */
 	public static int g(int x,int y) {
 		int s=0;
 		if(x==0) {

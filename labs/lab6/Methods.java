@@ -1,5 +1,8 @@
 package lab6;
 
+import static org.junit.Assert.*;
+
+
 public class Methods {
 	
 	//
@@ -13,7 +16,10 @@ public class Methods {
 		
 		//
 		// from here, call f or g with the appropriate parameters
-		//
+		//		
+		assertEquals(Beer.f(99),Beer.f(100));
+		assertEquals(Beer.f(99),Beer.f(87));
+		
 
 	}
 
