@@ -2,6 +2,8 @@ package watermelons;
 
 import java.util.Arrays;
 
+import sun.security.util.Length;
+
 public class Watermelons {
 	
 	/**
@@ -15,10 +17,23 @@ public class Watermelons {
 	 * @return an array containing the sums of pairs as described above
 	 */
 	public static int[] allPairSums(int[] nums) {
-		int[] ans = new int[] { 0 };  // FIXME compute ans as the result you want
+		int[] ans = new int[(nums.length-1)*nums.length/2];  // FIXME compute ans as the result you want
+		int s=0;
+		int a=0;
+		for(s=0;s<nums.length-1;s++) {					
+			for(int i=s+1;i<=nums.length-1;i++) {
+				ans[a]=nums[s]+nums[i];
+				a=a+1;		
+			}
+		}
 		return ans;
 	}
 	
+	private static int nums(int i) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
 	/**
 	 * The method below must COMPUTE and return a solution as described
 	 * on the web page for this extension.  
@@ -32,7 +47,7 @@ public class Watermelons {
 	 * @return
 	 */
 	public static int[] getSolution(int[] pairSums) {
-		return new int[] { 0 };
+		
 	}
 	
 	/**
