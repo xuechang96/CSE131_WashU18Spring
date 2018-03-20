@@ -29,10 +29,7 @@ public class Watermelons {
 		return ans;
 	}
 	
-	private static int nums(int i) {
-		// TODO Auto-generated method stub
-		return 0;
-	}
+	
 
 	/**
 	 * The method below must COMPUTE and return a solution as described
@@ -47,7 +44,22 @@ public class Watermelons {
 	 * @return
 	 */
 	public static int[] getSolution(int[] pairSums) {
-		
+		int []f=new int [5];
+		for(int a=1;a<25;a++) {
+			for(int b=1;b<25;b++) {
+				for(int c=1;c<25;c++) {
+					for(int d=1;d<25;d++) {
+						for(int e=1;e<25;e++) {
+							int []n={e,d,c,b,a};
+							if(sameIntArrays(allPairSums(n),pairSums)) {
+								f=n;
+							}
+						}
+					}
+				}
+			}
+		}
+		return f;
 	}
 	
 	/**
