@@ -24,11 +24,12 @@ public class Mario {
 		
 		String c="    ";
 		String f="#";
-		for(int i=0;i<5;i++) 
+		for(int i=0;i<4;i++) {
 			System.out.println(c+f);
 			c=c.substring(0,c.length()-1);
-			f=f+"#";
+			f=f+"#";						
 			}
+		System.out.println("#####");
 	}
 
-
+}
