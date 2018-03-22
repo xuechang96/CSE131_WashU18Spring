@@ -25,8 +25,7 @@ public class Eyeballs {
 		
 		for( int i=0;i<N;i++) {			
 			StdDraw.setPenColor(Color.BLACK);
-			eyes[0][i]=Math.random();
-			eyes[1][i]=Math.random();
+			
 		while (!StdDraw.mousePressed()) {
 		    // do nothing, 
 		    // we are waiting for the mouse button to go down  
@@ -35,21 +34,33 @@ public class Eyeballs {
 		    //
 		    StdDraw.show(50);
 		}
+		eyes[0][i]=StdDraw.mouseX();
+		eyes[1][i]=StdDraw.mouseY();
 		StdDraw.circle(eyes[0][i], eyes[1][i], 0.04);
-		m[0][i]=StdDraw.mouseX();
-		m[1][i]=StdDraw.mouseY();
-		d[0][i]=m[0][i]-eyes[0][i];
-		d[1][i]=m[1][i]-eyes[1][i];
-		dis[i]=Math.pow((Math.pow(d[0][i], 2)+Math.pow(d[1][i], 2)),.5);
-		double r=0.03/dis[i];
-		p[0][i]=eyes[0][i]+d[0][i]*r;
-		p[1][i]=eyes[1][i]+d[1][i]*r;
-		
 		StdDraw.setPenColor(Color.red);
-		StdDraw.filledCircle(p[0][i],p[1][i],0.01);
-		StdDraw.show(100);
+		StdDraw.filledCircle(eyes[0][i],eyes[1][i],0.01);
+		}
+	while(true) {			
+			StdDraw.clear();
+			StdDraw.picture(0.5, 0.5, "images/ken.jpg");
+			for(int i=0;i<N;i++) {
+				StdDraw.setPenColor(Color.black);
+				StdDraw.circle(eyes[0][i], eyes[1][i], 0.04);
+			}
+			for( int i=0;i<N;i++) {					
+				m[0][i]=StdDraw.mouseX();
+				m[1][i]=StdDraw.mouseY();
+				d[0][i]=m[0][i]-eyes[0][i];
+				d[1][i]=m[1][i]-eyes[1][i];
+				dis[i]=Math.pow((Math.pow(d[0][i], 2)+Math.pow(d[1][i], 2)),.5);
+				double r=0.03/dis[i];
+				p[0][i]=eyes[0][i]+d[0][i]*r;
+				p[1][i]=eyes[1][i]+d[1][i]*r;				
+				StdDraw.setPenColor(Color.red);
+				StdDraw.filledCircle(p[0][i],p[1][i],0.01);
+				StdDraw.show(10);
 		}	
-		
+		}
 	}
-	}
+}
 
