@@ -13,8 +13,7 @@ public class Mario {
 		for(int i=0;i<5;i++) {
 			System.out.println(s);
 			s=s.substring(0,s.length()-1);
-		}
-		
+		}		
 		String b="#####";
 		String a="";
 		for (int i=0;i<5;i++) {
