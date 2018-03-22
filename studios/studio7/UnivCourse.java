@@ -17,7 +17,6 @@ public class UnivCourse {
 		this.department = department;
 		this.stdnumber = stdnumber;
 	}
-
 	public String getDepartment() {
 		return this.department;
 	}
