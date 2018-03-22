@@ -7,7 +7,7 @@ package exercises7;
  *      Instance variables
  *      Methods
  *         Accessors: return value of instance variables
- *         Mutators: change value
+ *         Mutators: change by fia  the value of instance variables
  *         Other
  *
  */
