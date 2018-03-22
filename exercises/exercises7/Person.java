@@ -12,6 +12,7 @@ package exercises7;
  *
  */
 public class Person {
+	
 	/**
 	 * instance variables
 	 */
