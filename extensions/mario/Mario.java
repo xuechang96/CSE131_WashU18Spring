@@ -3,14 +3,33 @@ package mario;
 public class Mario {
 
 	public static void main(String[] args) {
-		String s1="    #"+"\n"+"   ##"+"\n"+"  ###"+"\n"+" ####"+"\n"+"#####";
-		String s2="#    "+"\n"+"##   "+"\n"+"###  "+"\n"+"#### "+"\n"+"#####";
-		String s3="#####"+"\n"+" ####"+"\n"+"  ###"+"\n"+"   ##"+"\n"+"    #";
-		String s4="#####"+"\n"+"#### "+"\n"+"###  "+"\n"+"##   "+"\n"+"#    ";
-		System.out.println(s1);
-		System.out.println(s2);
-		System.out.println(s3);
-		System.out.println(s4);
+		String d="#";
+		for(int i=0;i<5;i++) {
+			System.out.println(d);
+			d=d+"#";
+		}
+		
+		String s="#####";
+		for(int i=0;i<5;i++) {
+			System.out.println(s);
+			s=s.substring(0,s.length()-1);
+		}
+		
+		String b="#####";
+		String a="";
+		for (int i=0;i<5;i++) {
+			System.out.println(a+b);
+			a=a+" ";
+			b=b.substring(0,b.length()-1);
+		}
+		
+		String c="    ";
+		String f="#";
+		for(int i=0;i<5;i++) 
+			System.out.println(c+f);
+			c=c.substring(0,c.length()-1);
+			f=f+"#";
+			}
 	}
 
-}
+
