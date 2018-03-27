@@ -30,7 +30,11 @@ public class Course {
 	public int getRemainingSeats() {
 		return this.seats;
 	}
-	
+	/**
+	 * Check to make sure that the student has not already enrolled, and update the number of seats remaining. Return true if s has been enrolled as a result of this call. Return false otherwise.
+	 * @param s
+	 * @return
+	 */
 	public boolean addStudent(Student s) {
 		boolean add=true;
 		if(this.seats<=0) {
@@ -46,6 +50,10 @@ public class Course {
 				}
 			}
 		}	
+		/**
+		 * returns a String that represents a roster with all of the Students in the course. The roster should contain the Students' names. Make sure to omit empty seats!
+
+		 */
 		if(add) {
 		this.roster[this.roster.length-this.seats]=s.getName();
 		this.sumGPA=this.sumGPA+s.getGPA();
@@ -54,12 +62,17 @@ public class Course {
 		}
 		return add;
 	}
-	
+/**
+ * returns the average GPA of all students enrolled in the course. Make sure to omit seats! from this calculation
+ * @return
+ */
 	public double averageGPA() {
 		return this.sumGPA/this.numb;
 	}
 	
-		
+		/**
+		 * the returned String should contain the course number and credits
+		 */
 	public String toString() {
 		return this.Name+this.credits;
 	}
