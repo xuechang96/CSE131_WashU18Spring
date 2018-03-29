@@ -15,6 +15,21 @@ public class UsingSet {
 		//      your solution to UsingList)
 		//
 
+		Set<String> eating= new HashSet<String>();
+		
+		eating.add("open mouth");
+		eating.add("insert food");
+		System.out.println("First add "+eating.add("chew"));
+		System.out.println("Second add "+eating.add("chew"));
+		eating.add("chew");
+		eating.add("swallow");
+		
+		System.out.println(eating);
+		
+		
+		eating.remove("digest");
+		System.out.println("After deleting"+eating);
+		
 	}
 
 }
