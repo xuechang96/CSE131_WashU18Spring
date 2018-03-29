@@ -2,6 +2,7 @@ package exercises8;
 
 public class ThinkingAboutLists {
 
+	
 	public static void main(String[] args) {
 		// Example of list of colors
 		// Traffic lights: green, yellow, red, the order is important

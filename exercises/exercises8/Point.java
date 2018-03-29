@@ -59,7 +59,6 @@ public class Point {
 		return y;
 	}
 
-
 	public static void main(String[] args) {
 		List<Point> list=new LinkedList<Point>();
 		list.add(new Point(131,132));
