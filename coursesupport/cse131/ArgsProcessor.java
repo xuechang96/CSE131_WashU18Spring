@@ -6,6 +6,7 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
+import java.io.InputStream;
 import java.io.PrintStream;
 
 import javax.swing.JFileChooser;
@@ -219,6 +220,23 @@ public class ArgsProcessor {
 			e.printStackTrace();
 		}
 
+	}
+	
+	/**
+	 * Change the source of  input to the specified
+	 * file name, found within the user's eclipse workspace
+	 * @param fname the name of the file to be opened, specified
+	 *    from the top level of the user's eclipse workspace
+	 */
+	public static void changeStdIn(String fname) {
+		String topdir = System.getProperty("user.dir");
+		File f = new File(topdir + "/" + fname);
+		try {
+			InputStream ifs = new FileInputStream(f);
+			System.setIn(ifs);
+		} catch (Throwable t) {
+			throw new Error("" + t);
+		}
 	}
 
 	/**
