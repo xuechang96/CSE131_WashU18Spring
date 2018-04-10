@@ -10,8 +10,8 @@ public class NPV {
 	 * @param r The interest rate, computed at the end of each year
 	 * @return the future value of the investment
 	 */
-	public static double futureValue(double dollars, int years, double r) {
-		return 0.0; // FIXME
+	public static double futureValue(double dollars, int years, double rate) {
+		return dollars*Math.pow(1+rate, years);
 	}
 
 	/**
@@ -23,8 +23,8 @@ public class NPV {
 	 * @param r the discount rate, computed annually
 	 * @return the present value of the future money
 	 */
-	public static double presentValue(double dollars, int years, double r) {
-		return 0.0; // FIXME
+	public static double presentValue(double dollars, int years, double rate) {
+		return dollars/Math.pow(1+rate, years); 
 	}
 	
 	/**
@@ -36,8 +36,12 @@ public class NPV {
 	 * @param r the discount rate of money per year
 	 * @return the net present value after all payouts are made
 	 */
-	public static double netPresentValue(double investment, int years, double payout, double r) { 
-		return 0.0;
+	public static double netPresentValue(double investment, int years, double payout, double rate) { 
+		double inflow=0;
+		for(int i=0;i<years;++i) {
+			inflow=inflow+presentValue(payout,i+1,rate);
+		}
+		return inflow-investment;
 	}
 	
 }

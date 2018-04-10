@@ -22,7 +22,7 @@ import sedgewick.StdDraw;
  * Polynomial.   By using a sparse representation, we retain only
  * the 0-degree and 100-degree terms in this case.
  * 
- * @author yournamehere
+ * @author Neil Xu
  *
  */
 public class SparsePolynomial implements Polynomial {
@@ -30,6 +30,12 @@ public class SparsePolynomial implements Polynomial {
 	//
 	// TODO Declare instance variable(s)
 	//
+	private final Set<Term> field;
+
+	@Override
+	public String toString() {
+		return "SparsePolynomial [field=" + field + "]";
+	}
 
 	/**
 	 * Primary constructor
@@ -39,6 +45,54 @@ public class SparsePolynomial implements Polynomial {
 	 */
 	public SparsePolynomial(Term[] array) {
 		// TODO complete this constructor
+		this.field = new HashSet<Term>();
+		// Create a term array with all degrees types (0-100);
+		//Term[] arrayNew = new Term[101];
+		// For each degree j, add all coefficients with degree j in array Term
+		int max=0;
+		for(int i=0;i<array.length;++i) {
+			if(max<array[i].getDegree()) {
+				max=array[i].getDegree();
+			}
+		}
+		for(int j=0;j<=max;++j) {
+			double d=0;
+			for(int i=0;i<array.length;++i) {
+				if(array[i].getDegree()==j) {
+					d=d+array[i].getCoefficient();
+				}
+			}
+			if(d!=0) {
+				this.field.add(new Term(d,j));
+			}
+		}
+		
+		//Add term whose coefficient is not 0 in our new term array
+	}
+
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((field == null) ? 0 : field.hashCode());
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		SparsePolynomial other = (SparsePolynomial) obj;
+		if (field == null) {
+			if (other.field != null)
+				return false;
+		} else if (!field.equals(other.field))
+			return false;
+		return true;
 	}
 
 	/**
@@ -73,6 +127,101 @@ public class SparsePolynomial implements Polynomial {
 			double y = this.evaluate(x);
 			StdDraw.point(x, y);
 		}
+	}
+
+	@Override
+	public int degree() {
+		if(this.field.isEmpty()) {
+			return 0;
+		} 
+		else {
+			int b=0;
+			for(Term t:this.field) {
+				if(b < t.getDegree()) {
+					b = t.getDegree();
+				}
+			}
+			return b;
+		}
+
+	}
+
+	@Override
+	public double getCoefficientAtDegree(int degree) {
+		double a=0;
+		for(Term t:this.field) {
+			if(t.getDegree()==degree) {
+				a = t.getCoefficient();
+			}
+		}
+		return a;
+	}
+
+	@Override
+	public double evaluate(double x) {
+		double sum=0;
+		for(Term t:this.field) {
+			sum = sum+t.evaluateTermAtX(x);
+		}
+		return sum;
+	}
+
+	@Override
+	public Term[] toArray() {
+		int max=0;
+		for(Term t:this.field) {
+			if(max<t.getDegree()) {
+				max=t.getDegree();
+			}
+		}
+		Term[] term=new Term[max+1];
+		for(int i=0;i<term.length;++i) {
+			term[i]=new Term(this.getCoefficientAtDegree(i),i);
+		}
+		return term;
+	}
+
+	@Override
+	public Polynomial derivative() {
+		Term[] term1 = this.toArray();
+		Term[] der = new Term[term1.length];
+		
+		for(int i=0; i<term1.length; ++i) {
+			der[i] = new Term(term1[i].getCoefficient()*term1[i].getDegree(), term1[i].getDegree()-1);
+		}
+		
+		Polynomial a = new SparsePolynomial(der);
+		return a;
+	}
+
+	@Override
+	public Polynomial sum(Polynomial other) {
+		Term[] term1 = this.toArray();
+		Term[] term2 = other.toArray();
+		
+		Term[] termSum = new Term[term1.length+term2.length];
+		for(int i=0;i<term1.length;++i) {
+			termSum[i]=term1[i];
+		}
+		for(int i=term1.length;i<termSum.length;++i) {
+			termSum[i]=term2[i-term1.length];
+		}
+		Polynomial a = new SparsePolynomial(termSum);
+		return a;
+	}
+
+	@Override
+	public Polynomial addTerm(Term t) {
+		Term[] term1 = this.toArray();
+		Term[] add = new Term[term1.length+1];
+		
+		for(int i=0; i<term1.length; ++i) {
+			add[i] = term1[i];
+		}
+		add[term1.length]=t;
+		
+		Polynomial a = new SparsePolynomial(add);
+		return a;//Finished all! Yeah!
 	}
 
 
