@@ -38,7 +38,7 @@ public class NPV {
 	 */
 	public static double netPresentValue(double investment, int years, double payout, double rate) { 
 		double inflow=0;
-		for(int i=0;i<years;++i) {
+		for(int i=0;i<years;i++) {
 			inflow=inflow+presentValue(payout,i+1,rate);
 		}
 		return inflow-investment;
