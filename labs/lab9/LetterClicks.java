@@ -107,7 +107,7 @@ public class LetterClicks {
 			int nx=(int)(x/0.25);
 			int ny=(int)(y/0.2);
 //		System.out.println(x+" "+y);
-//		System.out.println(newX+" "+newY);
+//		System.out.println(nx+" "+ny);
 			
 			//submit
 			if(y>0.8) {
