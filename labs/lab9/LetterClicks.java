@@ -81,7 +81,6 @@ public class LetterClicks {
 				//StdDraw.setFont(20);
 				StdDraw.text((0.125+i*0.25), (0.7-j*0.2),array[i][j]);
 			}
-			//StdDraw.text(0.125+i*0.125, 0.7+j*0.2,array[0][j]);
 			//System.out.println("");
 		}
 		//submit set up
