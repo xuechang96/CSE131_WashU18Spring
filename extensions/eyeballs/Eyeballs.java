@@ -23,7 +23,6 @@ public class Eyeballs {
 				}
 				double x=StdDraw.mouseX();
 				double y=StdDraw.mouseY();
-				//x,y=the location of mouse of x and y.
 				StdDraw.setPenColor(Color.BLACK);
 				StdDraw.circle(x, y, 0.03);
 				StdDraw.setPenColor(Color.WHITE);
