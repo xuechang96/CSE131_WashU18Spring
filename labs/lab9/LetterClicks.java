@@ -101,10 +101,10 @@ public class LetterClicks {
 				System.out.println("Submit "+list);			
 				boolean f = Arrays.asList(DicList).contains(list.toLowerCase());
 				if(f) {
-					System.out.println("Yes!");
+					System.out.println("Yes");
 				}
 				else {
-					System.out.println("No!");
+					System.out.println("No");
 				}
 				list=" ";
 			}
